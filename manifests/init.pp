@@ -5,4 +5,5 @@
 # @example
 #   include puppet_logging_dashboard
 class puppet_logging_dashboard {
+  contain puppet_logging_dashboard::install_java
 }
