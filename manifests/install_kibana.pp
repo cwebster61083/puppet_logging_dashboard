@@ -11,4 +11,5 @@ class puppet_logging_dashboard::install_kibana {
       'server.host'                      => '0.0.0.0',
       'xpack.license_management.enabled' => false,
     },
+  }
 }
