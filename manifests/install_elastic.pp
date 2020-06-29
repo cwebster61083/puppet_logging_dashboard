@@ -13,6 +13,7 @@ class puppet_logging_dashboard::install_elastic(
   }
 
   class { 'elasticsearch':
+    version           => '7.8.0',
     restart_on_change => true,
   }
 
