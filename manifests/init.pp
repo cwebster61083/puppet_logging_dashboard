@@ -8,6 +8,8 @@ class puppet_logging_dashboard {
   include puppet_logging_dashboard::install_java
   include puppet_logging_dashboard::install_elastic
 
+  elasticsearch::instance { 'es-01': }
+
   # Class['puppet_logging_dashboard::install_java']
   # -> Class['puppet_logging_dashboard::install_elastic']
 }

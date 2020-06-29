@@ -12,7 +12,7 @@ class puppet_logging_dashboard::install_elastic(
     message => 'Installing Elastic Search',
   }
 
-  elasticsearch::instance { 'es-01':
-    ensure => 'present',
-  }
+  # elasticsearch::instance { 'es-01':
+  #   ensure => 'present',
+  # }
 }
