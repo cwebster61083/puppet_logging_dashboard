@@ -7,6 +7,7 @@
 class puppet_logging_dashboard {
   include puppet_logging_dashboard::install_java
   include puppet_logging_dashboard::install_elastic
+  include puppet_logging_dashboard::install_kibana
 
   # Class['puppet_logging_dashboard::install_java']
   # -> Class['puppet_logging_dashboard::install_elastic']
