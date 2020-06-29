@@ -4,11 +4,15 @@
 #
 # @example
 #   include puppet_logging_dashboard::install_elastic
-class puppet_logging_dashboard::install_elastic {
+class puppet_logging_dashboard::install_elastic(
+
+) {
   include elastic_stack::repo
   notify { 'Installing Elastic Search':
     message => 'Installing Elastic Search',
   }
 
-  elasticsearch::instance { 'es-01': }
+  elasticsearch::instance { 'es-01':
+    ensure => 'present',
+  }
 }
