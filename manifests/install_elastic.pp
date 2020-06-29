@@ -38,7 +38,4 @@ class puppet_logging_dashboard::install_elastic(
       'xpack.monitoring.collection.enabled' =>  true,
     },
   }
-  elasticsearch::instance { 'es-01':
-    ensure => 'present',
-  }
 }
