@@ -35,7 +35,7 @@ class puppet_logging_dashboard::install_elastic(
       #  'xpack.monitoring.collection.enabled' => true,
       'network.host'                        => '0.0.0.0',
       'http.port'                           => '9200',
-      'cluster.initial_master_nodes'        => 'elastic.puppetdebug.vlan',
+      'cluster.initial_master_nodes'        => 'elastic-es-01',
       'xpack.monitoring.collection.enabled' =>  true,
     },
   }
