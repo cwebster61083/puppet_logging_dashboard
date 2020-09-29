@@ -31,8 +31,8 @@ class puppet_logging_dashboard::install_elastic(
     config      => {
       'network.host'                        => '0.0.0.0',
       'http.port'                           => '9200',
-      'node.name'                           => $facts['hostname'],
-      'cluster.initial_master_nodes'        => $facts['hostname'],
+      'node.name'                           => $facts['networking']['hostname'],
+      'cluster.initial_master_nodes'        => $facts['networking']['hostname'],
       'xpack.monitoring.collection.enabled' =>  true,
       'xpack.license.self_generated.type'   => 'basic',
     },
