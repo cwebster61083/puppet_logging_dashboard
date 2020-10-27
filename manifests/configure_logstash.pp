@@ -10,13 +10,13 @@ class puppet_logging_dashboard::configure_logstash {
     source => 'puppet:///modules/puppet_logging_dashboard/puppetserver-log.conf',
   }
 
-  file { '/etc/logstash/conf.d/console-services-api-access-log.conf':
-    ensure => file,
-    source => 'puppet:///modules/puppet_logging_dashboard/console-services-api-access-log.conf',
-  }
+  # file { '/etc/logstash/conf.d/console-services-api-access-log.conf':
+  #   ensure => file,
+  #   source => 'puppet:///modules/puppet_logging_dashboard/console-services-api-access-log.conf',
+  # }
 
-  file { '/etc/logstash/conf.d/puppetserver-access.conf':
-    ensure => file,
-    source => 'puppet:///modules/puppet_logging_dashboard/puppetserver-access.conf',
-  }
+  # file { '/etc/logstash/conf.d/puppetserver-access.conf':
+  #   ensure => file,
+  #   source => 'puppet:///modules/puppet_logging_dashboard/puppetserver-access.conf',
+  # }
 }
