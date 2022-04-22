@@ -10,8 +10,14 @@ class puppet_logging_dashboard::install_elastic(
   class { 'elasticsearch':
     version           => '7.9.1',
     restart_on_change => true,
-    api_protocol            => 'http',
-    api_host                => '0.0.0.0',
+    config      => {
+      'network.host'                        => '0.0.0.0',
+      'http.port'                           => '9200',
+      'node.name'                           => $facts['networking']['hostname'],
+      'cluster.initial_master_nodes'        => $facts['networking']['hostname'],
+      'xpack.monitoring.collection.enabled' =>  true,
+      'xpack.license.self_generated.type'   => 'basic',
+    },
   }
 
   # elasticsearch::instance { 'es-01':
