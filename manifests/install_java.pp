@@ -7,7 +7,8 @@
 class puppet_logging_dashboard::install_java(
   String $java_package  = 'openjdk-11-jre-headless',
 ) {
-  class { 'java':
-    package => $java_package,
-  }
+  include java
+#   class { 'java':
+#     package => $java_package,
+#   }
 }
