@@ -8,7 +8,7 @@ class puppet_logging_dashboard::install_elastic(
 
 ) {
   class { 'elasticsearch':
-    version           => '7.9.1',
+    # version           => '7.9.1',
     restart_on_change => true,
     config      => {
       'network.host'                        => '0.0.0.0',
