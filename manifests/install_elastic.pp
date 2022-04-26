@@ -17,6 +17,7 @@ class puppet_logging_dashboard::install_elastic(
       'cluster.initial_master_nodes'        => $facts['networking']['hostname'],
       'xpack.monitoring.collection.enabled' =>  true,
       'xpack.license.self_generated.type'   => 'basic',
+      'xpack.security.enabled'              => false,
     },
   }
 
